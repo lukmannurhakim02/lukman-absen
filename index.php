@@ -1,6 +1,5 @@
 <?php
 include "bot.php";
-include "konek.php";
 ?>
 <link rel="stylesheet" href="style.css">
 <body>

@@ -1,16 +1,26 @@
 <?php
-include "bot.php";
-include "konek.php";
+include "../bot.php";
+include "../style.css";
+session_start();
+
+if ($_SESSION['level']= "") {
+    header("location:../index.php");
+}
+
+if ($_SESSION['level'] == "admin") {
+    header("location:../admin/index.php");
+}
+echo $_SESSION['level'];
 ?>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 <section id="sidebar">
         <a href="#" class="brand mt-2">
-            <img class="img-fluid rounded-circle " src="logo.jpg" alt="" width="50px" height="50px">
+            <img class="img-fluid rounded-circle " src="../img/logo.jpg" alt="" width="50px" height="50px">
             <p>SMKN 1 RONGGA</p>
         </a>
         <ul class="side-menu">
             <li>
-                <a href="dashboard.php" class="active"><i class='bx bxs-dashboard fs-3'></i><span class="fs-6">Dashboard</span></a>
+                <a href="index.php" class="active"><i class='bx bxs-dashboard fs-3'></i><span class="fs-6">Dashboard</span></a>
             </li>
             <li>
                 <a href="absen.php"><i class='bx bxs-book fs-3'></i><span class="fs-6">Absensi</span></a>
@@ -18,7 +28,9 @@ include "konek.php";
             <li>
                 <a href="laporan.php"><i class='bx bxs-edit-alt fs-3'></i><span class="fs-6">Laporan</span></a>
             </li>
-        </ul>
+        </ul><br>
+
+        <a href="../logout.php"></a>
     </section>
 <section id="data-siswa">
 <div class="table-data"> 
@@ -52,6 +64,28 @@ include "konek.php";
     <?php
     }
     ?>
+    <?php 
+			if(isset($_GET['petugas'])){
+				$page = $_GET['petugas'];
+		 
+				switch ($page) {
+					case 'transaksi':
+						include "transaksi.php";
+						break;
+					case 'beranda':
+						include "beranda.php";
+						break;
+					case 'tutorial':
+						include "halaman/tutorial.php";
+						break;			
+					default:
+						echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
+						break;
+				}
+			}else{
+				include "dasboard.php";
+			}
+	 ?>
 </table>
 </div>
 </section>
