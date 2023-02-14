@@ -4,15 +4,15 @@ include "../koneksi.php";
 if (isset ($_POST['add'])) {
     $nis = $_POST['nis'];
     $nama = $_POST['nama'];
-    $jenis_kelamn = $_POST['jenis_kelamin'];
-    $tanggal_lahir = $_POST['tanggal_lahir'];
+    $keterangan = $_POST['keterangan'];
+    $tanggal = $_POST['tanggal'];
 
-    $add = "INSERT INTO siswa (nis, nama, jenis_kelamin, tanggal_lahir) VALUE('$nis','$nama','$jenis_kelamn','$tanggal_lahir')";
+    $add = "INSERT INTO absen (nis, nama, keterangan, tanggal) VALUE ('$nis','$nama','$keterangan','$tanggal')";
 
     if ($conn->query($add) === TRUE) {
         echo "New record created successfully";
       } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $add . "<br>" . $conn->error;
     }
 }
 ?>
@@ -40,19 +40,30 @@ if (isset ($_POST['add'])) {
 <form class="tambah" action="" method="post">
     <div class="tb-dt">
         <label for="exampleInputEmail1" class="form-label">Nis Siswa</label>
-        <input type="text" name="nis" placeholder="nis"><br>
+        <input type="text" name="nis"><br>
     </div>
     <div class="tb-dt">
         <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
-        <input type="text" name="nama" placeholder="nama"><br>
+        <input type="text" name="nama"><br>
     </div>
     <div class="tb-dt">
-        <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-        <input type="text" name="jenis_kelamin" placeholder="jenis_kelamin"><br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="keterangan" id="inlineRadio1" value="hadir">
+            <label class="form-check-label" for="inlineRadio1">Hadir</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="keterangan" id="inlineRadio2" value="sakit">
+            <label class="form-check-label" for="inlineRadio2">Sakit </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="keterangan" id="inlineRadio2" value="izin">
+            <label class="form-check-label" for="inlineRadio2">Izin </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="keterangan" id="inlineRadio2" value="tanpa keterangan">
+            <label class="form-check-label" for="inlineRadio2">Tanpa Keterangan </label>
+        </div>
     </div>
-    <div class="tb-dt">
-        <label for="exampleInputEmail1" class="form-label">Tanggal lahir</label>
-        <input type="text" name="tanggal_lahir" placeholder="tanggal_lahir"><br>
     </div>
     <input type="submit" name="add" value="tambah" class="btn btn-succes">
 </form>

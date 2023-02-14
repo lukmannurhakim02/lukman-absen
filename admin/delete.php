@@ -1,8 +1,11 @@
 <?php
-include "koneksi.php";
-$NIS = $_GET['NIS'];
-$delete = mysqli_query($koneksi, "DELETE FROM siswa_rpl3 WHERE NIS = 'NIS'");
+include "../koneksi.php";
 
-if($delete)
-header('location:dashboard.php');
+$nis = $_GET['nis'];
+
+$delete = $conn->query("DELETE FROM siswa_rpl3 WHERE NIS = '$nis'");
+
+if($delete){
+header('location:../admin/index.php');
+}
 ?>
