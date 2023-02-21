@@ -8,21 +8,16 @@ if (isset ($_POST['add'])) {
     $jenis_kelamn = $_POST['jenis_kelamin'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
 
-    $add = "INSERT INTO siswa VALUE('$nis','$nama','$jenis_kelamn','$tanggal_lahir')";
-
-    if ($conn->query($add) === TRUE) {
-        header("location:index.php?page=siswa");
-        ob_end_flush();
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    $add = "INSERT INTO siswa VALUE('','$nis','$nama', '$jenis_kelamn','$tanggal_lahir')";
+    $insert = mysqli_query($conn, $add);
+    
 }
 ?>
 <link rel="stylesheet" href="../patch/style.css">
 
 <body style="background-color:black;">
 <div class="tambah_data">
-    <form class="mx-5 py-3" >
+    <form class="mx-5 py-3" method="post" action="">
         <div class="mb-2">
             <label for="nis" class="form-label">Nis Siswa</label>
             <input type="text" class="form-control" id="nis" name="nis">
