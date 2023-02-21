@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #d1d1d1;
+    background-color: #b3b3b3;
     font-family: 'poppins',sans-serif;
 }
 html{
@@ -39,7 +39,7 @@ nav .bx-menu {
     position: absolute;
     width: 391px;
     height: 490px;
-    left: 524px;
+    left: 460px;
     top: 50px;
     box-shadow: 1px 1px 100px #129fc2;
     background: #ffffff;
@@ -60,7 +60,6 @@ h1{
 .mb-3 .form-control {
     width: 330px;
     height: 50px;
-    background: #B8B8B8;
     border-radius: 15px;
 }
 .form-check {
@@ -233,19 +232,23 @@ h1{
     position: relative;
     width: calc(100% - 260px);
     left: 260px;
+    transition: all .3s ease;
+}
+#sidebar.hide + #content {
+    width: calc(100% - 60px);
+    left: 60px;
 }
 
 /* --- MAIN --- */
 main {
     width: 100%;
-    margin-left: 245px;
     padding: 20px 20px 20px 20px;
 }
 
 main .info-data {
     margin-top: 15px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
     padding: 20px;
 }
@@ -282,11 +285,47 @@ main .card .head .icon {
     position: relative;
     bottom: 45px;
 }
+/* ---MAIN KEHADIRAN--- */
+main .keterangan-card {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+main .keterangan-card .card {
+    padding: 5px;
+    border-radius: 10px;
+    background: #454C73;
+    box-shadow: 2px 2px 2px #1d2727;
+}
+main .keterangan-card .card .head {
+    color: #fff;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+main .card .kehadiran h2 {
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    top: 29px;
+}
+main .card .kehadiran .icon {
+    font-size: 40px;
+    opacity: calc(40%);
+}
+main .card .kehadiran .icon {
+    color: rgb(0, 0, 0);
+    float: right;
+    position: relative;
+    bottom: 45px;
+}
 /* ---END MAIN--- */
 #data-siswa {
     background-color: white;
-    margin-top: 50px;
-    margin-left: 270px;
+    margin-top: 10px;
+    margin-right: 20px;
     border-radius: 10px;
 }
 .table-data {
@@ -300,21 +339,28 @@ main .card .head .icon {
     position: relative;
     right: 47vh;
 }
-.tambah {
+/* ---Tambah data--- */
+.tambah_data {
     position: absolute;
-    width: 1160px;
-    height: 715px;
-    left: 270px;
-    top: 20px;
+    width: 95%;
+    top: 80px;
+    margin-right: 100px;
     background: #ffffff;
     border-radius: 10px;
 }
-.ngabsen {
-    position: absolute;
-    width: 1160px;
-    height: 715px;
-    left: 270px;
-    top: 20px;
-    background: #ffffff;
+.tambah_data .tb-dt {
+    margin-left: 30px;
+    margin-right: 70px;
+}
+.tambah_data .tb-dt label {
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+.tambah_data .tb-dt input {
+    /* width: 500px;
+    height: 50px; */
     border-radius: 10px;
 }
+/* ---Tambah data--- */
+/* ---Tambah Data Absen--- */

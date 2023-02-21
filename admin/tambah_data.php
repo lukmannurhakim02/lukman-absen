@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include "../bot.php";
 include "../koneksi.php";
 if (isset ($_POST['add'])) {
@@ -7,56 +8,60 @@ if (isset ($_POST['add'])) {
     $jenis_kelamn = $_POST['jenis_kelamin'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
 
-    $add = "INSERT INTO siswa (nis, nama, jenis_kelamin, tanggal_lahir) VALUE('$nis','$nama','$jenis_kelamn','$tanggal_lahir')";
+    $add = "INSERT INTO siswa VALUE('$nis','$nama','$jenis_kelamn','$tanggal_lahir')";
 
     if ($conn->query($add) === TRUE) {
-        echo "New record created successfully";
+        header("location:index.php?page=siswa");
+        ob_end_flush();
       } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 ?>
 <link rel="stylesheet" href="../patch/style.css">
-<section id="sidebar">
-    <a href="#" class="brand mt-2">
-        <img class="img-fluid rounded-circle " src="../img/logo.jpg" alt="" width="50px" height="50px">
-        <p>SMKN 1 RONGGA</p>
-    </a>
-    <ul class="side-menu">
-        <li>
-            <a href="../admin/index.php" class="active"><i class='bx bxs-dashboard fs-3'></i><span class="fs-6">Dashboard</span></a>
-        </li>
-        <li>
-            <a href="absen.php"><i class='bx bxs-book fs-3'></i><span class="fs-6">Absensi</span></a>
-        </li>
-        <li>
-            <a href="laporan.php"><i class='bx bxs-edit-alt fs-3'></i><span class="fs-6">Laporan</span></a>
-        </li>
-        <li>
-            <a href="../logout.php"><i class='bx bx-log-out fs-3 py-5'></i><span class="fs-6">Log-out</span></a>
-        </li>
-    </ul><br>
-</section>
-<form class="tambah" action="" method="post">
-    <div class="tb-dt">
-        <label for="exampleInputEmail1" class="form-label">Nis Siswa</label>
-        <input type="text" name="nis" placeholder="nis"><br>
-    </div>
-    <div class="tb-dt">
-        <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
-        <input type="text" name="nama" placeholder="nama"><br>
-    </div>
-    <div class="tb-dt">
-        <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-        <input type="text" name="jenis_kelamin" placeholder="jenis_kelamin"><br>
-    </div>
-    <div class="tb-dt">
-        <label for="exampleInputEmail1" class="form-label">Tanggal lahir</label>
-        <input type="text" name="tanggal_lahir" placeholder="tanggal_lahir"><br>
-    </div>
-    <input type="submit" name="add" value="tambah" class="btn btn-succes">
-</form>
 
+<body style="background-color:black;">
+<div class="tambah_data">
+    <form class="mx-5 py-3" >
+        <div class="mb-2">
+            <label for="nis" class="form-label">Nis Siswa</label>
+            <input type="text" class="form-control" id="nis" name="nis">
+        </div>
+        <div class="mb-2">
+            <label for="nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" name="nama">
+        </div>
+        <div class="mb-2">
+            <label for="jk" class="form-label">Jenis Kelamin</label>
+            <input type="text" class="form-control" id="jk" name="jenis_kelamin">
+        </div>
+        <div class="mb-2">
+            <label for="tg" class="form-label">Tanggal Lahir</label>
+            <input type="date" class="form-control" id="tg" name="tanggal_lahir">
+        </div>
+        <input type="submit" name="add" value="tambah" class="btn btn-success ">
+    </form>
+    <!-- <form action="" method="post">
+        <div class="tb-dt  col-6">
+            <label for="exampleInputEmail1" class="form-label">Nis Siswa</label><br>
+            <input type="text" name="nis"><br>
+        </div>
+        <div class="tb-dt">
+            <label for="exampleInputEmail1" class="form-label">Nama Siswa</label><br>
+            <input type="text" name="nama"><br>
+        </div>
+        <div class="tb-dt">
+            <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label><br>
+            <input type="text" name="jenis_kelamin"><br>
+        </div>
+        <div class="tb-dt">
+            <label for="exampleInputEmail1" class="form-label">Tanggal lahir</label><br>
+            <input type="date" name="tanggal_lahir"><br>
+        </div>
+        <input type="submit" name="add" value="tambah" class="btn btn-success ">
+    </form> -->
+</div>
+</body>
 <?php
 include "../footer.php";
 ?>

@@ -15,31 +15,30 @@ echo $_SESSION['level'];
 <link rel="stylesheet" href="../patch/style.css">
 <section id="sidebar">
         <a href="#" class="brand mt-2">
-            <img class="img-fluid rounded-circle " src="../img/logo.jpg" alt="" width="50px" height="50px">
-            <p>XII RPL</p>
+            <img class="img-fluid rounded-circle " src="../img/logo.jpg" alt="" width="60px" height="60px">
+            <p>Hello Admin</p>
         </a>
-        <ul class="side-menu">
-            <li><a href="../admin/index.php" class="active"><i class='bx bxs-dashboard fs-3'></i><span class="fs-6">Dashboard</span></a></li>
-            <li class="divider">Interface</li>
-            <li><a href="siswa.php"><i class='bx bxs-graduation fs-3'></i><span class="fs-6">Siswa</span></a></li>
-            <li><a href="absen.php"><i class='bx bxs-book fs-3'></i><span class="fs-6">Absensi</span></a></li>
-            <li><a href="laporan.php"><i class='bx bxs-edit-alt fs-3'></i><span class="fs-6">Laporan</span></a></li>
-            <li class="divider">Log-out</li>
-            <li><a href="../logout.php"><i class='bx bx-log-out fs-3 py-3'></i><span class="fs-6">Log-out</span></a></li>
+        <ul class="side-menu navbar-nav">
+            <li class="nav-item"><a href="?page=home" class="active nav-link"><i class='bx bxs-dashboard nav-item fs-5'></i>Dashboard</a></li>
+            <li class="divider" data-text="interface">Interface</li>
+            <li><a href="?page=siswa"><i class='bx bxs-graduation fs-3'></i>Siswa</a></li>
+            <li><a href="?page=absen"><i class='bx bxs-book fs-3'></i>Absensi</a></li>
+            <li><a href="?page=laporan"><i class='bx bxs-edit-alt fs-3'></i>Laporan</a></li>
+            <li class="divider" data-text="log-out">Log-out</li>
+            <li><a href="../logout.php"><i class='bx bx-log-out fs-3 py-3'></i>Log-out</a></li>
         </ul><br>
     </section>
 <!-- ---NAVBAR--- -->
     <section id="content">
-        <nav >
+        <nav>
             <div class="container-fluid">
                 <i class='bx bx-menu toggle-sidebar'></i>
                 <a class="navbar-brand text-white" href="#">
-                    Aplikasi Absensi Siswa SMKN 1 RONGGA
+                    Aplikasi Absensi Siswa
                 </a>
             </div>
         </nav>
-    </section>
-    <script src="../patch/style.js"></script>
+    <main>
 <?php
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
@@ -57,6 +56,12 @@ if (isset($_GET['page'])) {
         case 'laporan':
             include "laporan.php";
             break;    
+        case 'ngabsen':
+            include "ngabsen.php";
+            break;
+        case 'tambah_data':
+            include "tambah_data.php";
+            break;
         default:
             echo "<center><h3>Page</h3></center>";
             break;
@@ -66,3 +71,6 @@ if (isset($_GET['page'])) {
     include "../footer.php";
 }
 ?>
+</main>
+</section>
+<script src="../patch/style.js"></script>

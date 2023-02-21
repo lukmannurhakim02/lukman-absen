@@ -6,7 +6,7 @@ include "../koneksi.php";
 <section id="data-siswa">
 <div class="table-data"> 
 <h2>Data siswa RPL III</h2>
-<a href="tambah_data.php"><button type="button" class="btn btn-success">+Tambah</button></a>
+<a href="?page=tambah_data"><button type="button" class="btn btn-success">+Tambah</button></a>
 <table class="table table-light table-striped  py-3">
     <tr>
         <td>NIS</td>

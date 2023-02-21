@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
 		} 
 	}
 }else {
-	header("location:../index.php?pesan=gagal");
+	header("location:../login.php?pesan=gagal");
 }
 $conn->close();
 ?>
