@@ -20,7 +20,7 @@ if (isset ($_POST['add'])) {
 ?>
 <link rel="stylesheet" href="../patch/style.css">
 
-<body style="background-color:black;">
+<body>
 <div class="tambah_data">
     <form class="mx-5 py-3" >
         <div class="mb-2">
