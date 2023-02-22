@@ -21,7 +21,7 @@
         <div class="text-center">
           <h3>Tambah Data Absen</h3>
       </div>
-    <form method="POST" action="" class="py-4">
+    <form method="post" action="" class="py-4">
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Nama Murid</label>
         <select class="form-select" name="name" type="text" aria-label="Default select example"> 
