@@ -8,12 +8,11 @@ include 'koneksi.php';
  
 // menangkap data yang dikirim dari form
 $username = $_POST['username'];
-$nama_lengkap = $_POST['nama_lengkap'];
 $password = $_POST['password'];
 
 // menyeleksi data admin dengan username dan password yang sesuai
 
-$sql = "SELECT username='$username', nama_lengkap='$nama_lengkap', password=md5('$password') FROM tb_user";
+$sql = "SELECT username='$username', password=md5('$password') FROM tb_user";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

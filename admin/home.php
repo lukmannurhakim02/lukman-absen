@@ -1,14 +1,14 @@
 <main>
     <div class="text-start">
-        <h3>Dashboard</h3>
+        <h3>Dashboard Rpl III</h3>
     </div>
    <div class="row">
    <div class="info-data col-6">
         <div class="card bg-info">
             <div class="head">
                 <div>
-                    <h2>0<br>
-                    <span class="fs-6">Murid</span></h2>
+                    <h2>Ibu Diana<br>
+                    <span class="fs-6">Wali Kelas</span></h2>
                     <i class='bx bxs-graduation icon'></i>
                 </div>
             </div>

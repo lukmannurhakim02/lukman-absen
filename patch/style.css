@@ -40,7 +40,7 @@ nav .bx-menu {
     width: 391px;
     height: 490px;
     left: 460px;
-    top: 50px;
+    top: 20px;
     box-shadow: 1px 1px 100px #129fc2;
     background: #ffffff;
     border-radius: 10px;
@@ -363,4 +363,4 @@ main .card .kehadiran .icon {
     border-radius: 10px;
 }
 /* ---Tambah data--- */
-/* ---Tambah Data Absen--- */
+/* ---Edit--- */

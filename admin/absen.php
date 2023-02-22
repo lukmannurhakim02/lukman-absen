@@ -24,7 +24,7 @@
     <form method="post" action="" class="py-4">
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Nama Murid</label>
-        <select class="form-select" name="name" type="text" aria-label="Default select example"> 
+        <select class="form-select" name="nama" type="text" aria-label="Default select example"> 
         <?php
           include "../koneksi.php";
           
