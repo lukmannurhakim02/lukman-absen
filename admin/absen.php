@@ -1,11 +1,11 @@
 <?php 
   if(isset($_POST['add'])){
-
     $nama = $_POST['nama'];
-    $tanggal = $_POST['tanggal'];
-    $keterangan = $_POST['keterangan'];
+    date_default_timezone_set('Asia/Jakarta');
+    $tanggal = date_create('now')->format('Y-m-d H:i:s');
+    $keterangan = $_POST['information'];
     //PERINTAH SQL UNTUK MENAMBAHKAN DATA KEDALAM TABEL TB_KARYAWAN
-    $add = "INSERT INTO absen VALUES ( '$nama', '$tanggal', '$keterangan')";
+    $add = "INSERT INTO absen VALUES ('', '$nama', '$tanggal', '$keterangan')";
 
     if($conn->query($add) === TRUE ){
       header("location:index.php?page=laporan");
