@@ -1,11 +1,11 @@
 <?php 
   if(isset($_POST['add'])){
-    $nis = $_POST ['nis'];
+
     $nama = $_POST['nama'];
     $tanggal = $_POST['tanggal'];
     $keterangan = $_POST['keterangan'];
     //PERINTAH SQL UNTUK MENAMBAHKAN DATA KEDALAM TABEL TB_KARYAWAN
-    $add = "INSERT INTO absen (nama,tanggal,keterangan) VALUE ( '$nis', '$nama', '$tanggal', '$keterangan')";
+    $add = "INSERT INTO absen VALUES ( '$nama', '$tanggal', '$keterangan')";
 
     if($conn->query($add) === TRUE ){
       header("location:index.php?page=laporan");
@@ -36,7 +36,6 @@
             while ($data = mysqli_fetch_array($hasil)) {
           ?>
             <option value="<?php echo $data['nama'];?>">
-            <?php echo $data['nis'];?>
             <?php echo $data['nama'];?>
             </option>
           <?php 

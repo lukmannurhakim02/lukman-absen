@@ -23,7 +23,6 @@
       <table class=" list table ">
           <tr>
             <td>No</td>
-            <td>Nis</td>
             <td>Nama</td>
             <td>Tanggal</td>
             <td>Keterangan</td>
@@ -40,7 +39,6 @@
               ?>
               <tr>
               <td><?php echo $no;?></td>
-              <td><?php echo $a['nis']?></td>
               <td><?php echo $a['nama']?></td>
               <td><?php echo $a['tanggal']?></td>              
               <td><?php echo $a['keterangan']?></td>
@@ -56,7 +54,6 @@
               ?>
               <tr>
               <td><?php echo $no;?></td>
-              <td><?php echo $a['nis']?></td>
               <td><?php echo $a['nama']?></td>
               <td><?php echo $a['tanggal']?></td>              
               <td><?php echo $a['keterangan']?></td>
