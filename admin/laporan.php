@@ -2,11 +2,11 @@
     include "../koneksi.php";
 ?>
 <!-- SECTION LIST DATA KARYAWAN -->
-  <h3 class="text-uppercase">Recap Absensi Karyawan</h3>
+  <h3 class="text-uppercase">Recap Absensi Siswa</h3>
   <main >
     <div class="row">
     <div class="col-12">
-      <form action="index.php?page=recap" target="_parent" method="get">
+      <form action="index.php?page=laporan" target="_parent" method="get">
       <div class="input-group ">
       <input type="text" name="page" value="recap" hidden>
       <input type="date" class="form-control" placeholder="Search" aria-label="Recipient's username" name="awal">
@@ -23,6 +23,7 @@
       <table class=" list table ">
           <tr>
             <td>No</td>
+            <td>Nis</td>
             <td>Nama</td>
             <td>Tanggal</td>
             <td>Keterangan</td>
@@ -39,8 +40,9 @@
               ?>
               <tr>
               <td><?php echo $no;?></td>
-              <td><?php echo $a['name']?></td>
-              <td><?php echo $a['date']?></td>              
+              <td><?php echo $a['nis']?></td>
+              <td><?php echo $a['nama']?></td>
+              <td><?php echo $a['tanggal']?></td>              
               <td><?php echo $a['keterangan']?></td>
 
               <?php
@@ -54,10 +56,9 @@
               ?>
               <tr>
               <td><?php echo $no;?></td>
-              <td><?php echo $a['name']?></td>
-              <td><?php echo $a['date']?></td>              
-              <td><?php echo $a['time_in']?></td>
-              <td><?php echo $a['time_out']?></td>
+              <td><?php echo $a['nis']?></td>
+              <td><?php echo $a['nama']?></td>
+              <td><?php echo $a['tanggal']?></td>              
               <td><?php echo $a['keterangan']?></td>
 
              <?php 

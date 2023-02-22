@@ -1,13 +1,14 @@
-<?php
+<?php 
   if(isset($_POST['add'])){
-    $name = $_POST['name'];
-    $date = $_POST['date'];
+    $nis = $_POST ['nis'];
+    $nama = $_POST['nama'];
+    $tanggal = $_POST['tanggal'];
     $keterangan = $_POST['keterangan'];
     //PERINTAH SQL UNTUK MENAMBAHKAN DATA KEDALAM TABEL TB_KARYAWAN
-    $add = $conn->query("INSERT INTO absen VALUE ('', '$name', '$date', '$keterangan')");
+    $add = "INSERT INTO absen (nama,tanggal,keterangan) VALUE ( '$nis', '$nama', '$tanggal', '$keterangan')";
 
-    if($add){
-      header("location:index.php?page=absen");
+    if($conn->query($add) === TRUE ){
+      header("location:index.php?page=laporan");
     }
   }
 ?>
@@ -23,19 +24,20 @@
     <form method="POST" action="" class="py-4">
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Nama Murid</label>
-        <select class="form-select" name="name" type="text" aria-label="Default select example">
+        <select class="form-select" name="name" type="text" aria-label="Default select example"> 
         <?php
           include "../koneksi.php";
           
-          //PERINTAH SQL UNTUK MENAMPILKAN SEMUA DATA DARI TABEL TB_KARYAWAN
+          //PERINTAH SQL UNTUK MENAMPILKAN SEMUA DATA DARI TABEL TB_SISWA
             $sql="SELECT * from siswa";
 
             $hasil=mysqli_query($conn,$sql);
             print_r($hasil);
             while ($data = mysqli_fetch_array($hasil)) {
           ?>
-            <option value="<?php echo $data['name'];?>">
-            <?php echo $data['name'];?>
+            <option value="<?php echo $data['nama'];?>">
+            <?php echo $data['nis'];?>
+            <?php echo $data['nama'];?>
             </option>
           <?php 
           }
@@ -43,10 +45,7 @@
       </select>
     </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Tanggal</label>
-        <input type="date" class="form-control" placeholder="masukkan tanggal" name="date" required>
-      </div>
-      <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Keterangan</label>
         <select class="form-select" name="information" type="text" aria-label="Default select example">
         <option selected value="hadir">Hadir</option>
         <option value="sakit">Sakit</option>

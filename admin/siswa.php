@@ -5,10 +5,11 @@ include "../koneksi.php";
 <link rel="stylesheet" href="../patch/style.css">
 <section id="data-siswa">
 <div class="table-data"> 
-<h2>Data siswa RPL III</h2>
+<h2>Data siswa</h2>
 <a href="?page=tambah_data"><button type="button" class="btn btn-success">+Tambah</button></a>
 <table class="table table-light table-striped  py-3">
     <tr>
+        <td>No</td>
         <td>NIS</td>
         <td>Nama</td>
         <td>Jenis Kelamin</td>
@@ -19,14 +20,16 @@ include "../koneksi.php";
     $query = "SELECT * FROM siswa";
     $select = mysqli_query($conn, $query);
     while ($data = mysqli_fetch_array($select)){
+        @$no++;
     ?>
         <tr>
+            <td><?php echo $no++;?></td>
             <td><?php echo $data["nis"] ?></td>
             <td><?php echo $data["nama"] ?></td>
             <td><?php echo $data["jenis_kelamin"] ?></td>
             <td><?php echo $data["tanggal_lahir"] ?></td>
             <td><a href="delete.php?nis=<?php echo $data['nis']?>"><button type="button" class="btn btn-danger">Delete</button></a>
-            <a href="edit.php?nis=<?php echo $data['nis']?>"><button type="button" class="btn btn-warning">Edit</button></a></td>
+            <a href="index.php?page=edit<?php echo $data['nis']?>"><button type="button" class="btn btn-warning">Edit</button></a></td>
 
         </tr>
     <?php

@@ -62,6 +62,9 @@ if (isset($_GET['page'])) {
         case 'tambah_data':
             include "tambah_data.php";
             break;
+        case 'edit':
+            include "edit.php";
+            break;
         default:
             echo "<center><h3>Page</h3></center>";
             break;
