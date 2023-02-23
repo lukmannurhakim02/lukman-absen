@@ -6,5 +6,5 @@ session_start();
 session_destroy();
  
 // mengalihkan halaman sambil mengirim pesan logout
-header("location:../lukmannurhakim/index.php");
+header("location:../lukman-absen/index.php");
 ?>

@@ -4,10 +4,10 @@ include "../koneksi.php";
 if (isset ($_POST['add'])) {
     $nis = $_POST['nis'];
     $nama = $_POST['nama'];
-    $jenis_kelamn = $_POST['jenis_kelamin'];
+    $jenis_kelamin = $_POST['jenis_kelamin'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
 
-    $add = "INSERT INTO siswa (nis, nama, jenis_kelamin, tanggal_lahir) VALUES ('$nis','$nama', '$jenis_kelamn','$tanggal_lahir')";
+    $add = "INSERT INTO siswa (nis, nama, jenis_kelamin, tanggal_lahir) VALUES ('$nis','$nama', '$jenis_kelamin','$tanggal_lahir')";
     $insert = mysqli_query($conn, $add);
     
 }
@@ -27,9 +27,10 @@ if (isset ($_POST['add'])) {
         </div>
         <div class="mb-2">
             <h6 class="form-label">Jenis Kelamin</h6>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Laki-laki</option>
-                <option selected>Perempuan</option>
+            <select class="form-select" name="jenis_kelamin" aria-label="Default select example">
+            <option value="laki-laki">laki-laki</option>
+            <option value="perempuan">perempuan</option>
+            
             </select> 
         </div>
         <div class="mb-2">

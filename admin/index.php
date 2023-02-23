@@ -19,13 +19,13 @@ echo $_SESSION['level'];
             <p>Hello Admin</p>
         </a>
         <ul class="side-menu navbar-nav">
-            <li class="nav-item"><a href="?page=home" class="active nav-link"><i class='bx bxs-dashboard nav-item fs-5'></i>Dashboard</a></li>
+            <li class="nav-item"><a href="?page=home" class="active nav-link"><i class='bx bxs-dashboard nav-item fs-5'></i><span>Dashboard</span></a></li>
             <li class="divider" data-text="interface">Interface</li>
-            <li><a href="?page=siswa"><i class='bx bxs-graduation fs-3'></i>Siswa</a></li>
-            <li><a href="?page=absen"><i class='bx bxs-book fs-3'></i>Absensi</a></li>
-            <li><a href="?page=laporan"><i class='bx bxs-edit-alt fs-3'></i>Laporan</a></li>
+            <li><a href="?page=siswa"><i class='bx bxs-graduation fs-3'></i> <span>Siswa</span></a></li>
+            <li><a href="?page=absen"><i class='bx bxs-book fs-3'></i> <span>Absensi</span></a></li>
+            <li><a href="?page=laporan"><i class='bx bxs-edit-alt fs-3'></i><span>Laporan</span></a></li>
             <li class="divider" data-text="log-out">Log-out</li>
-            <li><a href="../logout.php"><i class='bx bx-log-out fs-3 py-3'></i>Log-out</a></li>
+            <li><a href="../logout.php"><i class='bx bx-log-out fs-3 py-3'></i><span>LogOut</span></a></li>
         </ul><br>
     </section>
 <!-- ---NAVBAR--- -->

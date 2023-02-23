@@ -88,7 +88,7 @@ h1{
     max-width: 60px;
 }
 #sidebar.hide:hover {
-    max-width: 260px;
+    max-width: 100px;
 }
 #sidebar::-webkit-scrollbar{
     display: none;
@@ -171,60 +171,6 @@ h1{
     transition: all .3s ease;
     white-space: nowrap;
 }
-#sidebar.hide:hover .divider {
-    text-align: left;
-}
-#sidebar.hide .divider{
-    text-align: center;
-}
-#sidebar .side-dropdown{
-    padding-left: 50px;
-    max-height: 0;
-    overflow-y: hidden;
-    transition: all .15s ease;
-}
-#sidebar .side-dropdown.show{
-    max-height: 1000px;
-}
-#sidebar .side-dropdown a:hover {
-    color: grey;
-}
-#sidebar .ads{
-    width: 100%;
-    padding: 20px;
-}
-#sidebar.hide .ads {
-    display: none;
-}
-#sidebar .ads .wrapper {
-    background: #f1f0f6 ;
-    padding: 20px;
-    border-radius: 10px;
-}
-#sidebar .btn-upgrade {
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 0;
-    color: #fff;
-    background: #AC7088;
-    transition: all .3s ease;
-    border-radius: 5px;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-#sidebar .btn-upgrade:hover {
-    background: #411530 ;
-}
-#sidebar .ads .wrapper p {
-    font-size: 12px;
-    color: grey;
-    text-align: center;
-}
-#sidebar .ads .wrapper p span {
-    font-weight: 700;
-}
 /* --- END SIDEBAR --- */
 
 /* ---CONTENT--- */
@@ -238,7 +184,10 @@ h1{
     width: calc(100% - 60px);
     left: 60px;
 }
-
+#sidebar.hide .side-menu li span {
+    display: none;
+}
+/* ---END CONTENT--- */
 /* --- MAIN --- */
 main {
     width: 100%;
@@ -358,8 +307,6 @@ main .card .kehadiran .icon {
     font-weight: bold;
 }
 .tambah_data .tb-dt input {
-    /* width: 500px;
-    height: 50px; */
     border-radius: 10px;
 }
 /* ---Tambah data--- */

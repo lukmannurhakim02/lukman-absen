@@ -4,7 +4,7 @@
     date_default_timezone_set('Asia/Jakarta');
     $tanggal = date_create('now')->format('Y-m-d H:i:s');
     $keterangan = $_POST['information'];
-    //PERINTAH SQL UNTUK MENAMBAHKAN DATA KEDALAM TABEL TB_KARYAWAN
+    //PERINTAH SQL UNTUK MENAMBAHKAN DATA KEDALAM TABEL
     $add = "INSERT INTO absen VALUES ('', '$nama', '$tanggal', '$keterangan')";
 
     if($conn->query($add) === TRUE ){
@@ -49,7 +49,7 @@
         <option selected value="hadir">Hadir</option>
         <option value="sakit">Sakit</option>
         <option value="izin">Izin</option>
-        <option value="alpa">Alpa</option>
+        <option value="Tanpa_keterangan">Tanpa Keterangan</option>
     </select>
   </div>      
       <button type="submit" name="add" class="btn btn-primary">Tambah</button>

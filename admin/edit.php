@@ -13,19 +13,19 @@ while ($data = mysqli_fetch_array($edit)) {
         <section class="base mt-4">
             <div class="my-3">
                 <label>Nis</label>
-                <input type="text" class="form-control" name="nis">
+                <input type="text" class="form-control" name="nis"  value="<?php echo $data['nis'];?>">
             </div>
             <div class="my-3">
                 <label>Nama</label>
-                <input type="text" class="form-control" name="nama">
+                <input type="text" class="form-control" name="nama"  value="<?php echo $data['nama'];?>">
             </div>
             <div class="my-3">
                 <label>Jenis Kelamin</label>
-                <input type="text" class="form-control" name="jenis_kelamin">
+                <input type="text" class="form-control" name="jenis_kelamin"  value="<?php echo $data['jenis_kelamin'];?>">
             </div>
             <div class="my-3">
                 <label>Tanggal Lahir</label>
-                <input type="text" class="form-control" name="tanggal_lahir">
+                <input type="text" class="form-control" name="tanggal_lahir"  value="<?php echo $data['tanggal_lahir'];?>">
             </div>
             <button type="submit" name="edit" class="btn btn-success">Edit</button>
         </section>
