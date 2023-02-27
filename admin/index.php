@@ -33,10 +33,30 @@ echo $_SESSION['level'];
         <nav>
             <div class="container-fluid">
                 <i class='bx bx-menu toggle-sidebar'></i>
-                <a class="navbar-brand text-white" href="#">
-                    Aplikasi Absensi Siswa
-                </a>
             </div>
+            <div class="jam-digital-malasngoding">
+                    <div class="kotak">
+                        <p id="jam"> </p>
+                    </div>
+                    <div class="kotak">
+                    <b>:</b>
+                    </div>
+                    <div class="kotak">
+                        <p id="menit"></p>
+                    </div>
+                    <div class="kotak">
+                    <b>:</b>
+                    </div>
+                    <div class="kotak">
+                        <p id="detik"></p>
+                    </div>
+                </div>
+                <center>
+                <a href="https://www.malasngoding.com/membuat-jam-analog-dan-digital-dengan-javascript"></a>
+                </center>
+                <?php
+                print date('l, d F Y');
+                ?>
         </nav>
     <main>
 <?php

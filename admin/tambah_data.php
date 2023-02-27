@@ -10,6 +10,7 @@ if (isset ($_POST['add'])) {
     $add = "INSERT INTO siswa (nis, nama, jenis_kelamin, tanggal_lahir) VALUES ('$nis','$nama', '$jenis_kelamin','$tanggal_lahir')";
     $insert = mysqli_query($conn, $add);
     
+    header('location:index.php?page=siswa');
 }
 ?>
 <link rel="stylesheet" href="../patch/style.css">
@@ -30,7 +31,6 @@ if (isset ($_POST['add'])) {
             <select class="form-select" name="jenis_kelamin" aria-label="Default select example">
             <option value="laki-laki">laki-laki</option>
             <option value="perempuan">perempuan</option>
-            
             </select> 
         </div>
         <div class="mb-2">

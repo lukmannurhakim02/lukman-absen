@@ -11,7 +11,7 @@
       <input type="text" name="page" value="recap" hidden>
       <input type="date" class="form-control" placeholder="Search" aria-label="Recipient's username" name="awal">
       <input type="date" class="form-control" placeholder="Search" aria-label="Recipient's username" name="akhir">
-      <span class="input-group-text" ><button type="submit" class="btn"><i class='bx bx-search'></i></button></span>
+      <span class="input-group-text"><button type="submit" class="btn"><i class='bx bx-search'></i></button></span>
       <button class="btn btn-primary mx-2" onclick="printDiv('print')" type="submit"><i class='bx bx-printer'></i></button>
     </div>
     </form>
@@ -21,6 +21,7 @@
 <fieldset id="print">
     <main class="shadow bg-light">
       <table class=" list table ">
+
           <tr>
             <td>No</td>
             <td>Nama</td>
@@ -37,6 +38,7 @@
             while ($a=$tampil->fetch_array()){
               @$no++;
               ?>
+              
               <tr>
               <td><?php echo $no;?></td>
               <td><?php echo $a['nama']?></td>
