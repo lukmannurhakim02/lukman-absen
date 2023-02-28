@@ -7,7 +7,12 @@
         <div class="card bg-info">
             <div class="head">
                 <div>
-                    <h2>Ibu Diana<br>
+                    <?php
+                        $sql = "SELECT COUNT(*) as wali_kelas FROM  kelas";
+                        $result = $conn->query($sql);
+                    
+                        $count=$result->fetch_assoc();
+                    ?><h2><?php echo $count['wali_kelas'];?></h2><br>
                     <span class="fs-6">Wali Kelas</span></h2>
                     <i class='bx bxs-graduation icon'></i>
                 </div>
@@ -83,7 +88,7 @@
                 
                     $count=$result->fetch_assoc();
                     ?><h2><?php echo $count['keterangan'];?></h2><br>
-                    <span class="fs-6">Absen</span></h2>
+                    <span class="fs-6">Tanpa Keterangan</span></h2>
                     <i class='bx bxs-user-x icon '></i>
                 </div>
             </div>

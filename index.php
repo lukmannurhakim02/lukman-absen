@@ -25,7 +25,7 @@ include "bot.php";
     </nav>
     <section class="judul" class="py-4 bg-white">
         <div class="container py-5">
-            <div class="card border-2 ">
+            <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-7">
@@ -38,6 +38,29 @@ include "bot.php";
                     
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="unggulan py-4 bg-white">
+        <div class="container py-5">
+            <div class="card">
+                <h3 class="text-center py-3">Beberapa fungsi aplikasi Absen</h3>
+                <div class="card-body">
+                    <div class="row text-white offset-1 mb-4">
+                        <div class="col-3 shadow-1" style="background:#3A98B9; border-radius:5px;">
+                            <h2>Input Data</h2>
+                            <h5>Aplikasi ini bisa menginput data berdasarkan murid kelas masing-masing untuk menambahkan jumlah murid kelas</h5>
+                        </div>
+                        <div class="col-3 mx-5" style="background:#3A98B9; border-radius:5px; box-shadow:1px 1px 100px #129fc2;">
+                            <h2>Input Data</h2>
+                            <h5>Aplikasi ini bisa menginput data berdasarkan murid kelas masing-masing untuk menambahkan jumlah murid kelas</h5>
+                        </div>
+                        <div class="col-3" style="background:#3A98B9; border-radius:5px; box-shadow:1px 1px 100px #129fc2;">
+                            <h2>Input Data</h2>
+                            <h5>Aplikasi ini bisa menginput data berdasarkan murid kelas masing-masing untuk menambahkan jumlah murid kelas</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>    
         </div>
     </section>
 </body>
