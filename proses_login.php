@@ -12,13 +12,14 @@ $password = $_POST['password'];
 
 // menyeleksi data admin dengan username dan password yang sesuai
 
-$sql = "SELECT username='$username', password=md5('$password') FROM tb_user";
+$sql = "SELECT * FROM tb_user WHERE username='$username' AND password=md5('$password')";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 	// output data of each row
 	while ($row = $result->fetch_assoc()) {
 		if ($row['level'] = "admin") {
+			$_SESSION['id'] = $row['id'];
 			$_SESSION['username'] = $username;
 			$_SESSION['level'] == "admin";
 			header("location:admin/index.php");

@@ -8,9 +8,12 @@
             <div class="head">
                 <div>
                     <?php
-                        $sql = "SELECT COUNT(*) as wali_kelas FROM  kelas";
+                        $id = $_SESSION['id'];
+                        $sql = "SELECT tb_user.id, tb_user.id_kelas, kelas.wali_kelas
+                        FROM tb_user
+                        INNER JOIN kelas ON tb_user.id_kelas=kelas.id WHERE tb_user.id='$id'";
                         $result = $conn->query($sql);
-                    
+                        
                         $count=$result->fetch_assoc();
                     ?><h2><?php echo $count['wali_kelas'];?></h2><br>
                     <span class="fs-6">Wali Kelas</span></h2>

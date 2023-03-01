@@ -26,7 +26,7 @@ include "bot.php";
             while ($data = mysqli_fetch_array($hasil)) {
                 
                 ?>
-                <option value="<?php echo $data['id_kelas'];?>">
+                <option value="<?php echo $data['id'];?>">
                 <?php echo $data['nm_kelas'];?>
             </option>
             <?php
