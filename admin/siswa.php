@@ -5,8 +5,8 @@ include "../koneksi.php";
 <link rel="stylesheet" href="../patch/style.css">
 <section id="data-siswa">
 <div class="table-data"> 
-<h2>Data siswa</h2>
-<div class="row py-3">
+<h3>Data siswa</h3>
+<div class="row py-2">
     <div class="col-2">
     <a href="index.php?page=tambah_data"><button type="button" class="btn btn-success mb-2">+Tambah</button> </a>
     </div>
@@ -14,13 +14,13 @@ include "../koneksi.php";
     <form action="" class="acion">
     <div class="input-group">
         <input type="text" name="page" value="siswa" hidden>
-        <input type="text" name="search" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input type="text" name="search" class="form-control" placeholder="Cari Berdasarkan Nama" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button class="btn btn-outline-secondary" type="submit" name="cari" id="button-addon2"><i class='bx bx-search-alt fs-5'></i></button>
     </div>
     </form> 
     </div>
 </div>
-<table class="table table-light table-striped py-5">
+<table class="table table-light table-bordered py-3">
     <tr>
         <td>No</td>
         <td>NIS</td>

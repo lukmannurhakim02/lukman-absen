@@ -137,3 +137,4 @@ function waktu() {
     document.getElementById("menit").innerHTML = waktu.getMinutes();
     document.getElementById("detik").innerHTML = waktu.getSeconds();
 }
+// PAGINATION

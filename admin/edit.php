@@ -32,6 +32,7 @@ while ($data = mysqli_fetch_array($edit)) {
                 <input type="date" class="form-control" name="tanggal_lahir"  value="<?php echo $data['tanggal_lahir'];?>">
             </div>
             <div class=" py-3"><button type="submit" name="edit" class="btn btn-success btn-lg">Update</button></div>
+            <a href="?page=siswa" class="btn btn-primary"><i class='bx bx-arrow-back'></i></a>
         </section>
 <?php
 }

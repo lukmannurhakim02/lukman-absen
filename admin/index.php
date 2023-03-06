@@ -15,7 +15,7 @@ echo $_SESSION['level'];
 <link rel="stylesheet" href="../patch/style.css">
 <section id="sidebar">
         <a href="#" class="brand mt-2">
-            <img class="img-fluid rounded-circle " src="../img/logo.jpg" alt="" width="60px" height="60px">
+            <img class="img-fluid rounded-circle " src="patch/img/logo.jpg" alt="" width="60px" height="60px">
             <p>Hello Admin</p>
         </a>
         <ul class="side-menu navbar-nav">

@@ -1,6 +1,6 @@
 <main>
     <div class="text-start">
-        <h3>Dashboard Rpl III</h3>
+        <h3>Dashboard</h3>
     </div>
    <div class="row">
    <div class="info-data col-6">
@@ -11,11 +11,12 @@
                         $id = $_SESSION['id'];
                         $sql = "SELECT tb_user.id, tb_user.id_kelas, kelas.wali_kelas
                         FROM tb_user
-                        INNER JOIN kelas ON tb_user.id_kelas=kelas.id WHERE tb_user.id='$id'";
+                        INNER JOIN kelas ON tb_user.id_kelas=kelas.id_kelas WHERE tb_user.id='$id'";
                         $result = $conn->query($sql);
                         
                         $count=$result->fetch_assoc();
-                    ?><h2><?php echo $count['wali_kelas'];?></h2><br>
+                    ?>
+                    <h2><?php echo $count['wali_kelas'];?></h2><br>
                     <span class="fs-6">Wali Kelas</span></h2>
                     <i class='bx bxs-graduation icon'></i>
                 </div>

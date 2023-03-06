@@ -299,9 +299,8 @@ main .card .kehadiran .icon {
 /* ---END MAIN--- */
 #data-siswa {
     background-color: white;
-    margin-top: 10px;
     margin-right: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .table-data {
     margin-right: 20px;
@@ -353,3 +352,4 @@ main .card .kehadiran .icon {
     background: #e6e6e6;
     border-radius: 10px;
 }
+/* PAGINATION */
