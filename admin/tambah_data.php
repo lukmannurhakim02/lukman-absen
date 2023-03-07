@@ -38,6 +38,7 @@ if (isset ($_POST['add'])) {
             <input type="date" class="form-control" id="tg" name="tanggal_lahir">
         </div>
         <input type="submit" name="add" value="tambah" class="btn btn-success ">
+        <a href="?page=siswa" class="btn btn-primary my-3"><i class='bx bx-arrow-back'></i></a>
     </form>
 </div>
 </body>

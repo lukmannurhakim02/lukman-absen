@@ -22,7 +22,7 @@ include "bot.php";
     <nav class="navbar navbar-light bg-white fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-        <img src="patch/img/logosmk.webp" width="30px" heigh="30px">
+        <img src="img/logosmk.webp" width="30px" heigh="30px">
         <b>AttendNow</b>
         </a>
     </div>

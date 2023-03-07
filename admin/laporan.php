@@ -3,7 +3,7 @@
 ?>
 <!-- SECTION LIST DATA KARYAWAN -->
   <h3 class="text-uppercase">Recap Absensi Siswa</h3>
-  <main >
+  <section >
     <div class="row">
     <div class="col-12">
       <form action="index.php?page=laporan" target="_parent" method="get">
@@ -16,11 +16,11 @@
     </div>
     </form>
   </div>
-</main>
+</section>
 <br>
 <fieldset id="print">
-    <main class="shadow bg-light">
-      <table class=" list table ">
+    <section class="shadow bg-light">
+      <table class=" list table mb-5">
 
           <tr>
             <td>No</td>
@@ -68,7 +68,7 @@
               </tr>
         </table>
         </fieldset>
-      </main>  
+        </section>  
       </body>     
 <script type="text/javascript">
   function printDiv (el) {

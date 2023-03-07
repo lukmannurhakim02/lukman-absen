@@ -15,7 +15,7 @@ echo $_SESSION['level'];
 <link rel="stylesheet" href="../patch/style.css">
 <section id="sidebar">
         <a href="#" class="brand mt-2">
-            <img class="img-fluid rounded-circle " src="patch/img/logo.jpg" alt="" width="60px" height="60px">
+            <img class="img-fluid rounded-circle " src="../img/logo.jpg" alt="" width="60px" height="60px">
             <p>Hello Admin</p>
         </a>
         <ul class="side-menu navbar-nav">
@@ -29,7 +29,7 @@ echo $_SESSION['level'];
         </ul><br>
     </section>
 <!-- ---NAVBAR--- -->
-    <section id="content">
+    <section id="content" style="height:1000px">
         <nav>
             <div class="container-fluid">
                 <i class='bx bx-menu toggle-sidebar'></i>
@@ -51,7 +51,7 @@ echo $_SESSION['level'];
                         <p id="detik"></p>
                     </div>
                 </div>
-                <center>
+                <center">
                 <a href="https://www.malasngoding.com/membuat-jam-analog-dan-digital-dengan-javascript"></a>
                 </center>
                 <?php

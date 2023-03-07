@@ -201,7 +201,7 @@ h1{
 
 /* ---CONTENT--- */
 #content {
-    position: relative;
+    position: absolute;
     width: calc(100% - 260px);
     left: 260px;
     transition: all .3s ease;
@@ -218,6 +218,8 @@ h1{
 main {
     width: 100%;
     padding: 20px 20px 20px 20px;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 main .info-data {
@@ -334,7 +336,7 @@ main .card .kehadiran .icon {
 .tambah_data .tb-dt input {
     border-radius: 10px;
 }
-/* ---Tambah data--- */
+/* ---End Tambah data--- */
 /* ---ABSEN--- */
 .absen {
     background-color: #e6e6e6;
@@ -352,4 +354,3 @@ main .card .kehadiran .icon {
     background: #e6e6e6;
     border-radius: 10px;
 }
-/* PAGINATION */
