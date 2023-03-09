@@ -20,7 +20,7 @@ if (isset ($_POST['add'])) {
     <form class="mx-5 py-3" method="post" action="">
         <div class="mb-2">
             <label for="nis" class="form-label">Nis Siswa</label>
-            <input type="text" class="form-control" id="nis" name="nis">
+            <input type="text" class="form-control" id="nis" name="nis" required>
         </div>
         <div class="mb-2">
             <label for="nama" class="form-label">Nama</label>

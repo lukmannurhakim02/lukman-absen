@@ -14,11 +14,11 @@
 ?>
 
 <link rel="stylesheet" href="../patch/style.css">
-  <main class="absen"> 
+  <section class="absen"> 
     <div class="container ">
       <div class="row">
         <div class="col-12">
-        <div class="text-center">
+        <div class="text-center pt-3">
           <h3>Tambah Data Absen</h3>
       </div>
       <form method="post" action="" class="py-4">
@@ -57,4 +57,4 @@
   </div>   
 </div> 
 </div>
-</main>
+</section>

@@ -18,12 +18,12 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 	// output data of each row
 	while ($row = $result->fetch_assoc()) {
-		if ($row['level'] = "admin") {
+		if ($row['level'] == "Admin") {
 			$_SESSION['id'] = $row['id'];
 			$_SESSION['username'] = $username;
 			$_SESSION['level'] == "admin";
 			header("location:admin/index.php");
-		}elseif ($row['level'] == "petugas") {
+		}elseif ($row['level'] == "Petugas") {
 			$_SESSION['username'] = $username;
 			$_SESSION['level'] = "Petugas";
 			header("location:petugas/index.php");
@@ -32,5 +32,5 @@ if ($result->num_rows > 0) {
 }else {
 	header("location:../login.php?pesan=gagal");
 }
-$conn->close();
+$conn->close();//
 ?>

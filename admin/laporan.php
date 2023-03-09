@@ -50,7 +50,7 @@
             
           }else
           {
-            $tampil = $connect->query("SELECT * FROM absen WHERE date between'$_GET[awal]' and '$_GET[akhir]'");
+            $tampil = $conn->query("SELECT * FROM absen WHERE date between'$_GET[awal]' and '$_GET[akhir]'");
             while ($a=$tampil->fetch_array()){
               @$no++;
               ?>
