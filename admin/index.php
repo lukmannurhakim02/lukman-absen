@@ -23,7 +23,7 @@ echo $_SESSION['level'];
             <li class="divider" data-text="interface">Interface</li>
             <li><a href="?page=siswa"><i class='bx bxs-graduation fs-3'></i> <span>Siswa</span></a></li>
             <li><a href="?page=absen"><i class='bx bxs-book fs-3'></i> <span>Absensi</span></a></li>
-            <li><a href="?page=laporan"><i class='bx bxs-edit-alt fs-3'></i><span>Laporan</span></a></li>
+            <li><a href="?page=rekap"><i class='bx bxs-edit-alt fs-3'></i><span>Laporan</span></a></li>
             <li class="divider" data-text="log-out">Log-out</li>
             <li><a href="../logout.php"><i class='bx bx-log-out fs-3 py-3'></i><span>LogOut</span></a></li>
         </ul><br>
@@ -73,11 +73,8 @@ if (isset($_GET['page'])) {
         case 'absen':
             include "absen.php";
             break;
-        case 'laporan':
+        case 'rekap':
             include "laporan.php";
-            break;    
-        case 'ngabsen':
-            include "ngabsen.php";
             break;
         case 'tambah_data':
             include "tambah_data.php";

@@ -27,7 +27,6 @@
           <select class="form-select" name="nama" type="text" aria-label="Default select example"> 
           <?php
             include "../koneksi.php";
-            
             //PERINTAH SQL UNTUK MENAMPILKAN SEMUA DATA DARI TABEL TB_SISWA
               $sql="SELECT * from siswa";
 

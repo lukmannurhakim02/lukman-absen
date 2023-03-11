@@ -64,12 +64,16 @@ nav .bx-menu {
 .login {
     position: absolute;
     width: 391px;
-    height: 490px;
+    height: 600px;
     left: 530px;
-    top: 100px;
+    top: 60px;
     box-shadow: 1px 1px 100px #129fc2;
     background: #ffffff;
     border-radius: 10px;
+}
+.login .img {
+    margin-left: 120px;
+    margin-top: 20px;
 }
 h1{
     text-align: center;

@@ -6,8 +6,8 @@ if ($_SESSION['level']= "") {
     header("location:../index.php");
 }
 
-if ($_SESSION['level'] == "petugas") {
-    header("location:../admin/index.php");
+if ($_SESSION['level'] == "Super_admin") {
+    header("location:../superadmin/index.php");
 }
 echo $_SESSION['level'];
 ?>
@@ -16,13 +16,12 @@ echo $_SESSION['level'];
 <section id="sidebar">
         <a href="#" class="brand mt-2">
             <img class="img-fluid rounded-circle " src="../img/logo.jpg" alt="" width="60px" height="60px">
-            <p>Hello Admin</p>
+            <p>Super admin</p>
         </a>
         <ul class="side-menu navbar-nav">
             <li class="nav-item"><a href="?page=home" class="active nav-link"><i class='bx bxs-dashboard nav-item fs-5'></i><span>Dashboard</span></a></li>
             <li class="divider" data-text="interface">Interface</li>
-            <li><a href="?page=absen"><i class='bx bxs-book fs-3'></i> <span>Absensi</span></a></li>
-            <li><a href="?page=laporan"><i class='bx bxs-edit-alt fs-3'></i><span>Laporan</span></a></li>
+            <li><a href="?page=user"><i class='bx bxs-user fs-3'></i> <span>User</span></a></li>
             <li class="divider" data-text="log-out">Log-out</li>
             <li><a href="../logout.php"><i class='bx bx-log-out fs-3 py-3'></i><span>LogOut</span></a></li>
         </ul><br>
@@ -66,15 +65,12 @@ if (isset($_GET['page'])) {
         case 'home':
             include "home.php";
             break;
-        case 'siswa':
-            include "siswa.php";
+        case 'user':
+            include "user.php";
             break;
-        case 'absen':
-            include "absen.php";
+        case 'tambah-user':
+            include "tambah-user.php";
             break;
-        case 'laporan':
-            include "laporan.php";
-            break;    
         case 'edit':
             include "edit.php";
             break;
