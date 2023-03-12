@@ -9,7 +9,7 @@ include 'koneksi.php';
 // menangkap data yang dikirim dari form
 $username = $_POST['username'];
 $password = $_POST['password'];
-
+$error = "Username atau password salah";
 // menyeleksi data admin dengan username dan password yang sesuai
 
 $sql = "SELECT * FROM tb_user WHERE username='$username' AND password=('$password')";
@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
 		}elseif ($row['level'] == "Super_admin") {
 			$_SESSION['username'] = $username;
 			$_SESSION['level'] = "Super_admin";
-			header("location:superadmin/index.php");
+			header("location:admin_user/index.php");
 		} 
 	}
 }else {

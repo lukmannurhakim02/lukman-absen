@@ -1,11 +1,13 @@
 <?php
-include "../koneksi.php";
+    include "../koneksi.php";
+        $nis = $_GET['nis'];
+        $result = $conn->query("DELETE FROM siswa WHERE nis='$nis'");
+        if ($result) {
+            header("location:index.php?page=siswa");
+            }if ($sql) {
 
-$nis = $_GET['nis'];
-
-$delete = $conn->query("DELETE FROM siswa WHERE NIS = '$nis'");
-
-if($delete){
-header('location:index.php?page=siswa');
-}
+        }
+?>
+<?php
+include "../footer.php";
 ?>

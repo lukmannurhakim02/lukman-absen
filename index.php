@@ -51,16 +51,13 @@ include "bot.php";
                 <div class="card-body">
                     <div class="row text-black offset-1 mb-4">
                         <div class="col-3 py-3" style="background: #129fc2; border-radius:5px;">
-                            <h2>Input Data</h2>
-                            <h5>Aplikasi ini bisa menginput data berdasarkan murid kelas masing-masing untuk menambahkan jumlah murid kelas</h5>
+                            <h5>APK absen juga dapat meningkatkan transparansi dan akuntabilitas. Dengan mencatat kehadiran secara digital, semua data absensi dapat tersimpan dengan rapi dan mudah diakses. Hal ini membantu pengguna untuk memantau kehadiran karyawan atau siswa secara real-time, dan dapat memudahkan pengambilan keputusan yang tepat terkait manajemen kehadiran.</h5>
                         </div>
-                        <div class="col-3 mx-5" style="background: #129fc2; border-radius:5px;">
-                            <h2>Input Data</h2>
-                            <h5>Aplikasi ini bisa menginput data berdasarkan murid kelas masing-masing untuk menambahkan jumlah murid kelas</h5>
+                        <div class="col-3 mx-5 py-3" style="background: #129fc2; border-radius:5px;">
+                            <h5>APK absen dapat mempercepat proses absensi, karena pengguna dapat mengaksesnya langsung melalui perangkat mobile mereka, tanpa perlu lagi mengisi absen manual atau memeriksa absen secara manual. Hal ini dapat menghemat waktu dan tenaga pengguna, serta membantu meningkatkan produktivitas.</h5>
                         </div>
-                        <div class="col-3" style="background: #129fc2; border-radius:5px;">
-                            <h2>Input Data</h2>
-                            <h5>Aplikasi ini bisa menginput data berdasarkan murid kelas masing-masing untuk menambahkan jumlah murid kelas</h5>
+                        <div class="col-3 py-3" style="background: #129fc2; border-radius:5px;">
+                            <h5>APK absen juga dapat meningkatkan transparansi dan akuntabilitas. Dengan mencatat kehadiran secara digital, semua data absensi dapat tersimpan dengan rapi dan mudah diakses. Hal ini membantu pengguna untuk memantau kehadiran karyawan atau siswa secara real-time, dan dapat memudahkan pengambilan keputusan yang tepat terkait manajemen kehadiran.</h5>
                         </div>
                     </div>
                 </div>

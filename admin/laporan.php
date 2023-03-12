@@ -11,7 +11,7 @@
       <input type="text" name="page" value="rekap" hidden>
       <input type="date" class="form-control" placeholder="Search" aria-label="Recipient's username" name="awal">
       <input type="date" class="form-control" placeholder="Search" aria-label="Recipient's username" name="akhir">
-      <span class="input-group-text" ><button type="submit" class="btn btn-warning" data-toggle="search" data-placement="right" title="search"><i class='bx bx-search'></i></button></span>
+      <span class="input-group-text" ><button type="submit" class="btn btn-success" data-toggle="search" data-placement="right" title="search"><i class='bx bx-search'></i></button></span>
       <button class="btn btn-success mx-2" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i></button>
     </div>
     </form>

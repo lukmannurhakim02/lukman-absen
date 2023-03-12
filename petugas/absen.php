@@ -8,7 +8,7 @@
     $add = "INSERT INTO absen VALUES ('', '$nama', '$tanggal', '$keterangan')";
 
     if($conn->query($add) === TRUE ){
-      header("location:index.php?page=rekap");
+      header("location:index.php?page=laporan");
     }
   }
 ?>

@@ -45,31 +45,25 @@ include "../koneksi.php";
                             <td><?php echo $data["jenis_kelamin"] ?></td>
                             <td><?php echo $data["tanggal_lahir"] ?></td>
                             <td>
-                            <!-- Tombol untuk memicu modal -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                            <i class='bx bxs-trash'></i>
-                            </button>
-
-                            <!-- Modal Konfirmasi Delete -->
-                            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title" id="deleteModalLabel">Konfirmasi Hapus</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Apakah Anda yakin ingin menghapus data ini?</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                        <form action="delete.php" method="POST">
-                                        <input type="hidden" name="id" value="ID_DATA_YANG_INGIN_DIHAPUS">
-                                        <a href="delete.php?nis=<?php echo $data['nis']?>"><button type="submit" class="btn btn-danger ">Delete</button></a>
-                                        </form>
-                                    </div>
-                                    </div>
+                            <!-- tombol pemicu modal -->
+                            <button class="btn btn-danger" type="button" value="" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $data['nis'];?>"><i class='bx bxs-trash-alt' ></i></button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal<?php echo $data['nis'];?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
+                                <div class="modal-body">
+                                    Apakah anda yakin ingin menghapus data ini?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    <a href="delete.php?nis=<?php echo $data['nis'];?>" class="btn btn-danger">Hapus</a>
+                                </div>
+                                </div>
+                            </div>
                             </div>
 
                             <a href="index.php?page=edit&nis=<?php echo $data['nis']?>"><button type="button" class="btn btn-warning"><i class='bx bxs-edit-alt'></i></button></a></td>
