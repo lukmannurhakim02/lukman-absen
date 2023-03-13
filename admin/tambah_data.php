@@ -11,7 +11,7 @@ if (isset ($_POST['add'])) {
     $insert = mysqli_query($conn, $add);
     
     header('location:index.php?page=siswa');
-}
+} 
 ?>
 <link rel="stylesheet" href="../patch/style.css">
 
