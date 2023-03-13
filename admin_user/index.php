@@ -22,6 +22,7 @@ echo $_SESSION['level'];
             <li class="nav-item"><a href="?page=home" class="active nav-link"><i class='bx bxs-dashboard nav-item fs-5'></i><span>Dashboard</span></a></li>
             <li class="divider" data-text="interface">Interface</li>
             <li><a href="?page=user"><i class='bx bxs-user fs-3'></i> <span>User</span></a></li>
+            <li><a href="?page=kelas"><i class='bx bxs-school fs-3'></i> <span>Kelas</span></a></li>
             <li class="divider" data-text="log-out">Log-out</li>
             <li><a href="../logout.php"><i class='bx bx-log-out fs-3 py-3'></i><span>LogOut</span></a></li>
         </ul><br>
@@ -71,8 +72,17 @@ if (isset($_GET['page'])) {
         case 'tambah-user':
             include "tambah-user.php";
             break;
+        case 'tambah_kelas':
+            include "tambah_kelas.php";
+            break;
         case 'edit':
-            include "edit.php";
+            include "edit_kelas.php";
+            break;
+        case 'kelas':
+            include "kelas.php";
+            break;
+        case 'kelas_hapus':
+            include "kelas_hapus.php";
             break;
         default:
             echo "<center><h3>Page</h3></center>";

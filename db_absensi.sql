@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2023 at 08:17 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Waktu pembuatan: 12 Mar 2023 pada 08.55
+-- Versi server: 10.4.27-MariaDB
+-- Versi PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `absen`
+-- Struktur dari tabel `absen`
 --
 
 CREATE TABLE `absen` (
@@ -34,17 +34,10 @@ CREATE TABLE `absen` (
   `keterangan` enum('Hadir','Sakit','Izin','Tanpa_keterangan') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `absen`
---
-
-INSERT INTO `absen` (`id`, `nama`, `tanggal`, `keterangan`) VALUES
-(24, 'Lukman nurhakim', '2023-03-06 07:01:38', 'Hadir');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kelas`
+-- Struktur dari tabel `kelas`
 --
 
 CREATE TABLE `kelas` (
@@ -54,7 +47,7 @@ CREATE TABLE `kelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `kelas`
+-- Dumping data untuk tabel `kelas`
 --
 
 INSERT INTO `kelas` (`id_kelas`, `nm_kelas`, `wali_kelas`) VALUES
@@ -76,12 +69,13 @@ INSERT INTO `kelas` (`id_kelas`, `nm_kelas`, `wali_kelas`) VALUES
 (16, 'X RPL 4', 'wali kelas 10 rpl4'),
 (17, 'X TBSM 1', 'wali kelas 10 TBSM1'),
 (18, 'X TBSM 2', 'wali kelas 10 TBSM2'),
-(19, 'X ATPH', 'wali kelas 10 ATPH');
+(19, 'X ATPH', 'wali kelas 10 ATPH'),
+(20, 'superadmin', 'superadmin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `siswa`
+-- Struktur dari tabel `siswa`
 --
 
 CREATE TABLE `siswa` (
@@ -93,95 +87,99 @@ CREATE TABLE `siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `siswa`
+-- Dumping data untuk tabel `siswa`
 --
 
 INSERT INTO `siswa` (`id`, `nis`, `nama`, `jenis_kelamin`, `tanggal_lahir`) VALUES
-(17, '2345', 'Lukman nurhakim', 'Laki-laki', '2023-02-23'),
-(18, '8901', 'M Ikbal Firdaus', 'Laki-laki', '2023-02-06'),
 (19, '5678', 'Adelia fitriani', 'Perempuan', '2023-02-03'),
 (20, '4567', 'Annisa Nurlaely Arafah', 'Perempuan', '2005-01-20'),
-(21, '3456', 'Zidan Khulus Sajid', 'Laki-laki', '2023-03-04');
+(21, '3456', 'Zidan Khulus Sajid', 'Laki-laki', '2023-03-04'),
+(23, '01243', 'Rizki Firmansyah', 'Laki-laki', '2023-03-03'),
+(24, '3456', 'Dini Rahma Aprilianti', 'Laki-laki', '2023-03-10'),
+(30, '45647', 'Dini Rahma Aprilianti', 'Perempuan', '2023-03-08'),
+(31, '78689', 'Lukman nurhakim', 'Laki-laki', '2023-03-03'),
+(32, '097976', 'Rizki Firmansyah', 'Laki-laki', '2023-03-09'),
+(33, '67576', 'jggfd', 'Laki-laki', '2023-03-03');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_user`
+-- Struktur dari tabel `tb_user`
 --
 
 CREATE TABLE `tb_user` (
   `id` int(11) NOT NULL,
-  `username` varchar(10) NOT NULL,
+  `username` varchar(15) NOT NULL,
   `password` varchar(255) NOT NULL,
   `id_kelas` int(11) NOT NULL,
-  `level` enum('Admin','Petugas') NOT NULL
+  `level` enum('Super_admin','Admin','Petugas') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_user`
+-- Dumping data untuk tabel `tb_user`
 --
 
 INSERT INTO `tb_user` (`id`, `username`, `password`, `id_kelas`, `level`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 'Admin'),
-(2, 'petugas', 'afb91ef692fd08c445e8cb1bab2ccf9c', 1, 'Petugas'),
-(3, 'adminrpl3', '32cacb2f994f6b42183a1300d9a3e8d6', 3, 'Admin');
+(13, 'super_admin', 'superadmin', 20, 'Super_admin'),
+(14, 'adminrpl1', 'adminrpl1', 1, 'Admin'),
+(16, 'petugasrpl1', 'petugasrpl1', 1, 'Petugas');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `absen`
+-- Indeks untuk tabel `absen`
 --
 ALTER TABLE `absen`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kelas`
+-- Indeks untuk tabel `kelas`
 --
 ALTER TABLE `kelas`
   ADD PRIMARY KEY (`id_kelas`);
 
 --
--- Indexes for table `siswa`
+-- Indeks untuk tabel `siswa`
 --
 ALTER TABLE `siswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_user`
+-- Indeks untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `absen`
+-- AUTO_INCREMENT untuk tabel `absen`
 --
 ALTER TABLE `absen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
--- AUTO_INCREMENT for table `kelas`
+-- AUTO_INCREMENT untuk tabel `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `siswa`
+-- AUTO_INCREMENT untuk tabel `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT for table `tb_user`
+-- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

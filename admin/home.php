@@ -18,7 +18,7 @@
                     ?>
                     <h2><?php echo $count['wali_kelas'];?></h2><br>
                     <span class="fs-6">Wali Kelas</span></h2>
-                    <i class='bx bxs-graduation icon'></i>
+                    <i class='bx bxs-star icon'></i>
                 </div>
             </div>
         </div>

@@ -354,7 +354,7 @@ main .card .kehadiran .icon {
 /* ---EDIT--- */
 .edit {
     width: 100%;
-    height: 100%;
+    height: 500px;
     background: #e6e6e6;
     border-radius: 10px;
 }
