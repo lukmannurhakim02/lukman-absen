@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Mar 2023 pada 08.55
+-- Waktu pembuatan: 13 Mar 2023 pada 05.37
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.0
 
@@ -91,15 +91,7 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`id`, `nis`, `nama`, `jenis_kelamin`, `tanggal_lahir`) VALUES
-(19, '5678', 'Adelia fitriani', 'Perempuan', '2023-02-03'),
-(20, '4567', 'Annisa Nurlaely Arafah', 'Perempuan', '2005-01-20'),
-(21, '3456', 'Zidan Khulus Sajid', 'Laki-laki', '2023-03-04'),
-(23, '01243', 'Rizki Firmansyah', 'Laki-laki', '2023-03-03'),
-(24, '3456', 'Dini Rahma Aprilianti', 'Laki-laki', '2023-03-10'),
-(30, '45647', 'Dini Rahma Aprilianti', 'Perempuan', '2023-03-08'),
-(31, '78689', 'Lukman nurhakim', 'Laki-laki', '2023-03-03'),
-(32, '097976', 'Rizki Firmansyah', 'Laki-laki', '2023-03-09'),
-(33, '67576', 'jggfd', 'Laki-laki', '2023-03-03');
+(40, '23452', 'Rizki Firmansyah', 'Laki-laki', '2023-03-04');
 
 -- --------------------------------------------------------
 
@@ -122,7 +114,8 @@ CREATE TABLE `tb_user` (
 INSERT INTO `tb_user` (`id`, `username`, `password`, `id_kelas`, `level`) VALUES
 (13, 'super_admin', 'superadmin', 20, 'Super_admin'),
 (14, 'adminrpl1', 'adminrpl1', 1, 'Admin'),
-(16, 'petugasrpl1', 'petugasrpl1', 1, 'Petugas');
+(16, 'petugasrpl1', 'petugasrpl1', 1, 'Petugas'),
+(17, 'adminrpl3', 'adminrpl3', 3, 'Admin');
 
 --
 -- Indexes for dumped tables
@@ -144,7 +137,8 @@ ALTER TABLE `kelas`
 -- Indeks untuk tabel `siswa`
 --
 ALTER TABLE `siswa`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nis` (`nis`);
 
 --
 -- Indeks untuk tabel `tb_user`
@@ -161,25 +155,25 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT untuk tabel `absen`
 --
 ALTER TABLE `absen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT untuk tabel `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT untuk tabel `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
